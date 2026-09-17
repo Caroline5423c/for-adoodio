@@ -4,47 +4,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FORÇA DO ÓDIO: OPERAÇÃO ZUMBI</title>
+    <title>Na Força do Ódio: A Descida ao Caos</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cloudflare.com"></script>
 </head>
 
 <body>
 
-    <!-- Painel de Status Superior -->
-    <div id="painel-ui">
-        <div><strong>FASE: <span id="txt-fase">1</span>/20</strong> (<span id="nome-fase">Alistamento Padrão</span>)
-        </div>
-        <div class="barra-container">
-            <div class="texto-barra">FORÇA DO ÓDIO</div>
-            <div id="fill-odio" class="barra-fill"></div>
-        </div>
-        <div class="barra-container">
-            <div class="texto-barra">INFECÇÃO VÍRUS / VIDA</div>
-            <div id="fill-infeccao" class="barra-fill"></div>
+    <!-- TELA DE INÍCIO -->
+    <div id="tela-inicio">
+        <div id="conteudo-inicio">
+            <div class="glitch-txt" data-text="NA FORÇA DO ÓDIO">NA FORÇA DO ÓDIO</div>
+            <p class="subtitulo">A Descida Psicológica ao Caos (20 Fases)</p>
+
+            <div class="regras-painel">
+                <p>⚠️ <strong>DIRETRIZES DO SISTEMA:</strong></p>
+                <ul>
+                    <li>Bloco 1: Treinamento militar simulado e relaxante.</li>
+                    <li>Bloco 2: Recursos escassos e anomalias de ambiente.</li>
+                    <li>Bloco 3: Quebra de regras e falhas de hardware no input.</li>
+                    <li>Bloco 4: Sádico. Instakill ativo. Controles invertidos.</li>
+                </ul>
+            </div>
+
+            <button id="btn-jogar" onclick="iniciarJogo()">INICIAR EXPEDIENTE</button>
         </div>
     </div>
 
-    <!-- Área de Telas e Jogo -->
-    <div id="canvas-container">
-        <canvas id="gameCanvas" width="800" height="500"></canvas>
+    <!-- ELEMENTOS DO JOGO (HUD E ENGINE) -->
+    <div id="glitch-overlay"></div>
 
-        <!-- Tela de Início Obrigatória -->
-        <div id="tela-inicio" class="overlay" style="display: flex;">
-            <h1>FORÇA DO ÓDIO</h1>
-            <h2>OPERAÇÃO ZUMBI - 20 FASES</h2>
-            <p>O jogo militar mais difícil do mundo. Começa normal e piora até o nível impossível.</p>
-            <button id="btn-iniciar">INICIAR JOGO</button>
+    <div id="hud">
+        <h1 id="bloco-titulo" class="bloco-1">BLOCO 1: A Ilusão da Normalidade</h1>
+        <div class="info" id="fase-nome">Fase 1: O Alistamento Padrão</div>
+        <div id="fase-desc">O cenário é um quartel limpo e ensolarado. Atire nos alvos. Fácil e relaxante.</div>
+
+        <div class="info" style="margin-top: 15px;">Integridade Psicológica (Vida):</div>
+        <div id="barra-vida-container">
+            <div id="barra-vida"></div>
         </div>
 
-        <!-- Tela de Morte / Game Over -->
-        <div id="tela-morte" class="overlay" style="display: none;">
-            <h1 id="titulo-morte">VOCÊ MORREU!</h1>
-            <p id="msg-deboche">A força do ódio não foi suficiente.</p>
-            <button id="btn-reiniciar">TENTAR NOVAMENTE</button>
-        </div>
+        <div class="info" style="margin-top: 15px;">Alvos Restantes: <span id="inimigos-qtd">3</span></div>
+        <div class="info">Munição do Sistema: <span id="txt-municao">Infinita</span></div>
+        <div class="info" id="txt-odio-container">Força do Ódio Acumulada: <span id="pts-odio">0</span></div>
     </div>
 
-    <script src="script.js"></script>
+    <div id="chat-deus-zumbi">[SISTEMA]: Você é fraco. Desista.</div>
+    <div id="instrucoes">CLIQUE ESQUERDO NOS CUBOS PARA EXTERMINAR OS ERROS DO SISTEMA</div>
+
+    <script src="game.js"></script>
 </body>
 
 </html>
