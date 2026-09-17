@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORÇA DO ÓDIO: OPERAÇÃO ZUMBI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Painel de Status Superior -->
+    <div id="painel-ui">
+        <div><strong>FASE: <span id="txt-fase">1</span>/20</strong> (<span id="nome-fase">Alistamento Padrão</span>)
+        </div>
+        <div class="barra-container">
+            <div class="texto-barra">FORÇA DO ÓDIO</div>
+            <div id="fill-odio" class="barra-fill"></div>
+        </div>
+        <div class="barra-container">
+            <div class="texto-barra">INFECÇÃO VÍRUS / VIDA</div>
+            <div id="fill-infeccao" class="barra-fill"></div>
+        </div>
+    </div>
+
+    <!-- Área de Telas e Jogo -->
+    <div id="canvas-container">
+        <canvas id="gameCanvas" width="800" height="500"></canvas>
+
+        <!-- Tela de Início Obrigatória -->
+        <div id="tela-inicio" class="overlay" style="display: flex;">
+            <h1>FORÇA DO ÓDIO</h1>
+            <h2>OPERAÇÃO ZUMBI - 20 FASES</h2>
+            <p>O jogo militar mais difícil do mundo. Começa normal e piora até o nível impossível.</p>
+            <button id="btn-iniciar">INICIAR JOGO</button>
+        </div>
+
+        <!-- Tela de Morte / Game Over -->
+        <div id="tela-morte" class="overlay" style="display: none;">
+            <h1 id="titulo-morte">VOCÊ MORREU!</h1>
+            <p id="msg-deboche">A força do ódio não foi suficiente.</p>
+            <button id="btn-reiniciar">TENTAR NOVAMENTE</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
