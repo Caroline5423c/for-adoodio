@@ -6,53 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Na Força do Ódio: A Descida ao Caos</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cloudflare.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 
 <body>
 
-    <!-- TELA DE INÍCIO -->
     <div id="tela-inicio">
         <div id="conteudo-inicio">
-            <div class="glitch-txt" data-text="NA FORÇA DO ÓDIO">NA FORÇA DO ÓDIO</div>
+            <div class="glitch-txt">NA FORÇA DO ÓDIO</div>
             <p class="subtitulo">A Descida Psicológica ao Caos (20 Fases)</p>
 
             <div class="regras-painel">
                 <p>⚠️ <strong>DIRETRIZES DO SISTEMA:</strong></p>
                 <ul>
-                    <li>Bloco 1: Treinamento militar simulado e relaxante.</li>
-                    <li>Bloco 2: Recursos escassos e anomalias de ambiente.</li>
-                    <li>Bloco 3: Quebra de regras e falhas de hardware no input.</li>
-                    <li>Bloco 4: Sádico. Instakill ativo. Controles invertidos.</li>
+                    <li>Bloco 1 (Fases 1-5): Modo simulado e amigável.</li>
+                    <li>Bloco 2 (Fases 6-10): Recursos escassos e anoitecer.</li>
+                    <li>Bloco 3 (Fases 11-15): Pane no hardware e falhas de disparo.</li>
+                    <li>Bloco 4 (Fases 16-20): Modo Sádico. Controles Invertidos.</li>
                 </ul>
             </div>
 
-            <button id="btn-jogar" onclick="iniciarJogo()">INICIAR EXPEDIENTE</button>
+            <button id="btn-jogar">INICIAR EXPEDIENTE</button>
         </div>
     </div>
 
-    <!-- ELEMENTOS DO JOGO (HUD E ENGINE) -->
     <div id="glitch-overlay"></div>
 
     <div id="hud">
-        <h1 id="bloco-titulo" class="bloco-1">BLOCO 1: A Ilusão da Normalidade</h1>
-        <div class="info" id="fase-nome">Fase 1: O Alistamento Padrão</div>
-        <div id="fase-desc">O cenário é um quartel limpo e ensolarado. Atire nos alvos. Fácil e relaxante.</div>
+        <h1 id="bloco-titulo">BLOCO 1</h1>
+        <div class="info" id="fase-nome">Fase 1</div>
+        <div id="fase-desc">Carregando...</div>
 
-        <div class="info" style="margin-top: 15px;">Integridade Psicológica (Vida):</div>
+        <div class="info" style="margin-top: 15px;">Integridade Psicológica:</div>
         <div id="barra-vida-container">
             <div id="barra-vida"></div>
         </div>
 
-        <div class="info" style="margin-top: 15px;">Alvos Restantes: <span id="inimigos-qtd">3</span></div>
-        <div class="info">Munição do Sistema: <span id="txt-municao">Infinita</span></div>
-        <div class="info" id="txt-odio-container">Força do Ódio Acumulada: <span id="pts-odio">0</span></div>
+        <div class="info" style="margin-top: 15px;">Alvos Restantes: <span id="inimigos-qtd">0</span></div>
+        <div class="info" id="txt-odio-container" style="display:none; color:#ff6600;">Força do Ódio: <span
+                id="pts-odio">0</span></div>
     </div>
 
     <div id="chat-deus-zumbi">[SISTEMA]: Você é fraco. Desista.</div>
-    <div id="instrucoes">CLIQUE ESQUERDO NOS CUBOS PARA EXTERMINAR OS ERROS DO SISTEMA</div>
+    <div id="instrucoes">CLIQUE ESQUERDO NOS ALVOS PARA DEPURAR OS ERROS</div>
 
-    <script src="game.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
